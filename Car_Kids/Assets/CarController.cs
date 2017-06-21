@@ -41,17 +41,23 @@ public class CarController : MonoBehaviour {
 	public bool canMove;
 
 
-	void Start () {
-		
+	void Start ()
+	{
+		carVel = 0;	
+		Time.timeScale = 1;
+		Panel.gameObject.SetActive (false);
+		currentTime = 45;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		
 		if(Timer.IsActive())
 			Timer.text = (45-Mathf.CeilToInt(Time.time - currentTime)).ToString ();
+		
 		transform.Translate (0,Time.deltaTime*carVel,0,Space.World);
 		cam.transform.position = new Vector3 (0,this.transform.position.y+3.67f,-10.0f);
-
+		Debug.Log(45 - Mathf.CeilToInt (Time.time - currentTime));
 		if (45 - Mathf.CeilToInt (Time.time - currentTime) <= 0) {
 			Debug.Log ("GameOver");
 			carVel = 0;
@@ -67,10 +73,10 @@ public class CarController : MonoBehaviour {
 		}
 			if (Input.GetKey (KeyCode.LeftArrow)) {
 				if(this.transform.position.x>-2.4f)
-				this.transform.Translate (-Time.deltaTime*3, Time.deltaTime * carVel, 0, Space.World);
+				this.transform.Translate (-Time.deltaTime*9, Time.deltaTime * carVel, 0, Space.World);
 			} else if (Input.GetKey (KeyCode.RightArrow)) {
 					if(this.transform.position.x<2.0f)
-				this.transform.Translate (Time.deltaTime*3, Time.deltaTime * carVel, 0, Space.World);
+				this.transform.Translate (Time.deltaTime*9, Time.deltaTime * carVel, 0, Space.World);
 			} else {
 				this.transform.Translate (0, Time.deltaTime * carVel, 0, Space.World);
 			}
