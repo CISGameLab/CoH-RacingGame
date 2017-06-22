@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/road1.unity
+- path: Assets/road2.unity
   isLoaded: 1
   isActive: 1
