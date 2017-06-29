@@ -1,0 +1,33 @@
+<linker>
+	<assembly fullname="UnityEngine">
+		<type fullname="UnityEngine.GameObject">
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+		</type>
+	</assembly>
+	<assembly fullname="Assembly-CSharp">
+		<type fullname="menuController">
+			<method name="QuitClicked"/>
+			<method name="NextClicked"/>
+		</type>
+		<type fullname="CarController">
+			<method name="QuitClicked"/>
+			<method name="StartClicked"/>
+			<method name="MenuClicked"/>
+			<method name="NextClicked"/>
+			<method name="QuitClicked"/>
+			<method name="StartClicked"/>
+			<method name="MenuClicked"/>
+			<method name="NextClicked"/>
+			<method name="QuitClicked"/>
+			<method name="StartClicked"/>
+			<method name="MenuClicked"/>
+			<method name="QuitClicked"/>
+		</type>
+	</assembly>
+</linker>
