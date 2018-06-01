@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/road3.unity
+- path: Assets/Mianmenu.unity
   isLoaded: 1
   isActive: 1
