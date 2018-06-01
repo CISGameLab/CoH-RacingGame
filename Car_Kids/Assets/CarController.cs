@@ -89,6 +89,23 @@ public class CarController : MonoBehaviour {
 
 	}
 
+	void FixedUpdate()
+	{
+		if(this.transform.position.x>-2.4f && this.transform.position.x<2.0f)
+		{
+		 	this.transform.Translate (Input.acceleration.x, Time.deltaTime * carVel, 0, Space.World);
+		}
+		if(this.transform.position.x>2.0f)
+		{
+		 	this.transform.position = new Vector3 (1.9f, this.transform.position.y,this.transform.position.z);
+		}
+		if(this.transform.position.x<-2.4f)
+		{
+		 	this.transform.position = new Vector3 (-2.3f, this.transform.position.y,this.transform.position.z);
+		}
+
+    }
+
 	/*void OnCollisionEnter2D(Collision2D col)
 	{
 		Debug.Log ("Collided");
